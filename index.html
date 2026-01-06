@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Narkees Banu S | AI Engineering Portfolio</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root {
+  --neon-cyan: #00f2ff;
+  --neon-purple: #bc13fe;
+  --neon-pink: #ff00de;
+  --bg-dark: #010409;
+  --glass: rgba(13, 17, 23, 0.7);
+  --border: rgba(255, 255, 255, 0.1);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background-color: var(--bg-dark);
+  color: #fff;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* --- THUNDER & LIGHTNING EFFECT --- */
+.thunder-bg {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  z-index: -2;
+  background: radial-gradient(circle at 50% 10%, #161b22 0%, #010409 100%);
+}
+
+.lightning {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  z-index: -1;
+  opacity: 0;
+  pointer-events: none;
+  animation: strike 10s infinite;
+}
+
+@keyframes strike {
+  0%, 92% { opacity: 0; }
+  93% { opacity: 0.8; }
+  94% { opacity: 0; }
+  95% { opacity: 0.4; }
+  97% { opacity: 0; }
+}
+
+/* --- VERTICAL SECTION LAYOUT --- */
+section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 20px;
+  perspective: 1500px;
+}
+
+.separate-space {
+  max-width: 1100px;
+  width: 100%;
+  background: var(--glass);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  padding: 70px;
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 40px 100px rgba(0,0,0,0.8);
+}
+
+.separate-space:hover {
+  border-color: var(--neon-cyan);
+}
+
+/* --- GLITTERING HEADER --- */
+.glitter-box {
+  display: inline-block;
+  padding: 10px 28px;
+  background: linear-gradient(90deg, var(--neon-cyan), var(--neon-purple), var(--neon-pink), var(--neon-cyan));
+  background-size: 300% auto;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: 40px;
+  animation: glitter-flow 4s linear infinite;
+  color: #000;
+  transform: translateZ(50px);
+}
+
+@keyframes glitter-flow {
+  to { background-position: 300% center; }
+}
+
+/* --- TYPOGRAPHY --- */
+h1 { font-size: 5rem; margin: 0; letter-spacing: -4px; transform: translateZ(80px); line-height: 0.9; }
+h2 { font-size: 2.8rem; color: var(--neon-cyan); margin-bottom: 25px; transform: translateZ(60px); }
+p { font-size: 1.25rem; line-height: 1.8; color: #b1bac4; transform: translateZ(40px); max-width: 800px; }
+
+/* --- GRID SYSTEM --- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+  transform: translateZ(30px);
+}
+
+.item-card {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 30px;
+  border-radius: 25px;
+  text-align: center;
+  border: 1px solid var(--border);
+  transition: 0.4s;
+}
+
+.item-card:hover {
+  background: rgba(0, 242, 255, 0.08);
+  transform: translateY(-15px) translateZ(50px);
+  border-color: var(--neon-cyan);
+}
+
+.item-card i { font-size: 3rem; color: var(--neon-cyan); margin-bottom: 20px; }
+.item-card h4 { font-size: 1.1rem; margin-bottom: 10px; color: #fff; }
+
+/* --- CONTACT SPECIFICS --- */
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 20px;
+  margin-bottom: 15px;
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.contact-link:hover {
+  background: var(--neon-purple);
+  transform: translateX(20px);
+}
+
+.contact-link i { font-size: 1.5rem; }
+
+@media (max-width: 768px) {
+  h1 { font-size: 3rem; }
+  .separate-space { padding: 40px 20px; border-radius: 30px; }
+}
+</style>
+</head>
+<body>
+
+<div class="thunder-bg"></div>
+<div class="lightning"></div>
+
+<section id="home">
+  <div class="separate-space">
+    <div class="glitter-box">System Active</div>
+    <h1>Narkees Banu S</h1>
+    <h2>AI Engineer & Data Analyst</h2>
+    <p>
+      Engineering intelligent solutions at the intersection of data and automation. 
+      Student at Anand Institute of Higher Technology with a 7.96 CGPA.
+    </p>
+  </div>
+</section>
+
+<section id="about">
+  <div class="separate-space">
+    <div class="glitter-box">About Me</div>
+    <h2>The Digital Architect</h2>
+    <p>
+      I am a self-motivated learner based in Karapakkam, Chennai. I specialize in building 
+      small-scale projects that solve real-world problems. My approach focuses on 
+      clean code, database normalization, and relationship mapping. I am eager to apply 
+      my knowledge of Python and SQL in a professional environment.
+    </p>
+  </div>
+</section>
+
+<section id="stack">
+  <div class="separate-space">
+    <div class="glitter-box">Capabilities</div>
+    <h2>Hard Skills</h2>
+    <div class="grid">
+      <div class="item-card"><i class="fab fa-python"></i><h4>Python</h4></div>
+      <div class="item-card"><i class="fas fa-database"></i><h4>SQL Architecture</h4></div>
+      <div class="item-card"><i class="fab fa-html5"></i><h4>HTML5</h4></div>
+      <div class="item-card"><i class="fas fa-keyboard"></i><h4>Typewriting</h4></div>
+      <div class="item-card"><i class="fas fa-microchip"></i><h4>CRUD Systems</h4></div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="separate-space">
+    <div class="glitter-box">Case Study</div>
+    <h2>Restaurant Management System</h2>
+    <p>
+      Developed a high-performance database module handling menu distribution, 
+      live billing, and reservation logistics. 
+      <br><br>
+      • Automated report generation via SQL queries.<br>
+      • Implemented complex data normalization patterns.
+    </p>
+  </div>
+</section>
+
+<section id="certs">
+  <div class="separate-space">
+    <div class="glitter-box">Achievements</div>
+    <h2>Official Certifications</h2>
+    <div class="grid">
+      <div class="item-card"><i class="fas fa-shield-alt"></i><h4>Future Prime</h4></div>
+      <div class="item-card"><i class="fas fa-cloud"></i><h4>Infosys Springboard</h4></div>
+      <div class="item-card"><i class="fas fa-graduation-cap"></i><h4>Simplilearn</h4></div>
+      <div class="item-card"><i class="fas fa-rocket"></i><h4>upGrad</h4></div>
+    </div>
+  </div>
+</section>
+
+<section id="workshop">
+  <div class="separate-space">
+    <div class="glitter-box">Training</div>
+    <h2>Outskill Workshop</h2>
+    <p>
+      Completed advanced technical training focused on industry-standard 
+      software development practices and problem-solving methodologies.
+    </p>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="separate-space">
+    <div class="glitter-box">Contact Center</div>
+    <h2>Get In Touch</h2>
+    <p style="margin-bottom: 30px;">Currently seeking internship opportunities in Chennai or remote environments.</p>
+    
+    <div style="max-width: 500px;">
+      <a href="mailto:snarkeesbanu@gmail.com" class="contact-link">
+        <i class="fas fa-envelope"></i>
+        <span>snarkeesbanu@gmail.com</span>
+      </a>
+      
+      <a href="https://linkedin.com/in/narkeesbanu" target="_blank" class="contact-link">
+        <i class="fab fa-linkedin"></i>
+        <span>LinkedIn / NarkeesBanuS</span>
+      </a>
+      
+      <div class="contact-link">
+        <i class="fas fa-phone-alt"></i>
+        <span>+91 90256 93520</span>
+      </div>
+      
+      <div class="contact-link">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>Karapakkam, Chennai-97</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // HIGH-END 3D TILT EFFECT
+  const spaces = document.querySelectorAll('.separate-space');
+  
+  document.addEventListener('mousemove', (e) => {
+    const mouseX = e.clientX;
+    const mouseY = e.clientY;
+    
+    spaces.forEach(space => {
+      const rect = space.getBoundingClientRect();
+      
+      // Calculate center of the space
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
+      
+      // Tilt logic
+      const rotateX = (centerY - mouseY) / 30;
+      const rotateY = (mouseX - centerX) / 30;
+      
+      // Only tilt if it's currently on screen
+      if(rect.top < window.innerHeight && rect.bottom > 0) {
+        space.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+      }
+    });
+  });
+
+  // Reset Tilt
+  document.addEventListener('mouseleave', () => {
+    spaces.forEach(space => {
+      space.style.transform = `rotateX(0deg) rotateY(0deg)`;
+    });
+  });
+</script>
+
+</body>
+</html>
